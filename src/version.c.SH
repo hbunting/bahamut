@@ -13,11 +13,9 @@ else
 fi
 
 generation=`expr $generation + 1`
-
 uname=`uname -a`
-
 creation=`date | \
-awk '{if (NF == 6) \
+awk '{ if (NF == 6) \
 { print $1 " "  $2 " " $3 " "  $6 " at " $4 " " $5 } \
 else \
 { print $1 " "  $2 " " $3 " " $7 " at " $4 " " $5 " " $6 }}'`
@@ -53,8 +51,7 @@ char *generation = "$generation";
 char *creation = "$creation";
 char version[128];
 
-char *infotext[] =
-    {
+char *infotext[] = {
 	 "$package --",
 	 "Based on the original code written by Jarkko Oikarinen",
 	 "Copyright 1988, 1989, 1990, 1991 University of Oulu, Computing Center",
@@ -64,14 +61,14 @@ char *infotext[] =
 	 "published by the Free Software Foundation; either version 1, or",
 	 "(at your option) any later version.",
 	 "",
-     "Regular expression support is provided by the PCRE library package,",
-     "which is open source software, written by Philip Hazel, and copyright",
-     "by the University of Cambridge, England.",
-     "",
+	 "Regular expression support is provided by the PCRE library package,",
+	 "which is open source software, written by Philip Hazel, and copyright",
+	 "by the University of Cambridge, England.",
+	 "",
 	 "Send bug reports to dalnet-src@dal.net",
 	 "",
 	 "The following people currently compose the bahamut team and",
-     "actively maintain the bahamut codebase:",
+	 "actively maintain the bahamut codebase:",
 	 "epiphani            Aaron Wiebe         epiphani@dal.net",
          "Quension            Trevor Talbot       quension@dal.net",
 	 "Kobi                Kobi Shmueli        kobi@dal.net",
@@ -81,14 +78,14 @@ char *infotext[] =
 	 "aClient             Diane Bruce         db@koruna.varner.com",
 	 "Dakal               David Knepper       dakal@dal.net",
 	 "Dalvenjah           Sven Nielsen        dalvenjah@dal.net",
-     "lucas               Lucas Madar         lucas@dal.net",
+	 "lucas               Lucas Madar         lucas@dal.net",
 	 "MSofty              Mark Salerno        msofty@dal.net",
-     "Raistlin_Majere     Jason Slagle        raistlin@bahamut.net",
+	 "Raistlin_Majere     Jason Slagle        raistlin@bahamut.net",
 	 "Rakarra             Ian Westcott        rakarra@dal.net",
-     "sedition            David Parton        sedition@dal.net",
-	 "srd                 Holbrook Bunting          srd@powertrip.net",
+	 "sedition            David Parton        sedition@dal.net",
+	 "Holbrook            Holbrook Bunting    holbrook@dal.net",
 	 "White_Dragon        Chip Norkus         wd@dal.net",
-     "xPsycho             Ryan Smith          xpsycho@dal.net",
+	 "xPsycho             Ryan Smith          xpsycho@dal.net",
 	 "",
 	 "The following people have contributed ideas or testing to the",
 	 "bahamut project:",
@@ -121,5 +118,6 @@ char *infotext[] =
 	 "others continue to develop IRC.",
 	 "",
 	 0,
-};
+	};
+
 !SUB!THIS!
